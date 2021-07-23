@@ -39,4 +39,5 @@ function isEven(num, val)
 }
 
 // Calling the main function with the range as its paramater
-main(20);
+main(100);
+
