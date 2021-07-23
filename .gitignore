@@ -1,2 +1,5 @@
 # Ignore .vscode prefs
 .vscode
+
+# Ignore the TS configuration files
+TS/tsconfig.json
