@@ -1,3 +1,4 @@
+// Declaring a global max. value
 const MAX = 20;
 
 // Declare a new custom class
@@ -64,26 +65,81 @@ class Books
         // Process suitable input
         if (this.book != null)
         {
-            // Create a Map instance to store data
+            // Return a Map instance to store data
+            var dataContainer = new Map();
             dataContainer.set("Person1", [this.book, this.name]);
-            console.log(dataContainer);
+            return dataContainer;
         }
         // Issue invalud input
         else 
         {
+            // Return null
             console.log("Error!\n No Map object was created.")
+            return null;
         }
     }
 }
 
 // User default data values
-const person1 = "Michal", book1 = "AI Quest";
-
-// Creating a global Map object
-var dataContainer = new Map();
+const person1 = "Michal", book1 = "AI";
 
 // Create a new insntance of the class
 let bookInstance = new Books(person1, book1);
 
-// Invoke the prompt function from the class
-bookInstance.mapData();
+// Invoke the prompt function from the class and get the returned value
+let mapObject = bookInstance.mapData();
+
+// Process the Map Object
+function executeMap(map) 
+{
+    if (mapObject != null)
+    {
+        // If no null detected, print it out
+        console.log(map);
+    }
+    else
+    {
+        // If null detected, print 'undefined'
+        console.log(undefined);
+    }    
+}
+
+// Execute the function with the parameter
+executeMap(mapObject);
+
+// Create an extended class
+class modernBooks extends Books
+{
+    // Funnction to align the elements in a range
+    specialIteration(MAX)
+    {
+        // Create a constant message to be displayed in every iteration
+        const iterMessage = this.name + ": " + this.book;
+        for (let i = 1; i <= MAX; i++)
+        {
+            // Create a local container 'shift'
+            var shift;
+
+            // Shift every second message by it's length
+            if (i % 2 == 0)
+            {
+                shift = i + iterMessage.length;
+            }
+            else
+            {
+                shift = i;
+            }
+            // Output the message in a cycle
+            console.log(" ".repeat(shift) + " " + iterMessage);
+        }
+    }
+}
+
+// Range is to be a random intiger from 1 through 30
+const MAX_RANGE = Math.floor(Math.random() * 30) + 1;
+
+// Create an instance of the extended class
+let modernBooksInstance = new modernBooks(person1, book1);
+
+// Call a method of the class
+modernBooksInstance.specialIteration(MAX_RANGE);
