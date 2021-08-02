@@ -1,4 +1,4 @@
-# JavaScript Repo for the JS lovers! <3
+# Learning web developemnt with JS and TS.
 
 ___
 
