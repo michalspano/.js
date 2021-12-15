@@ -3,3 +3,4 @@
 
 # Ignore the TS configuration files
 TS/tsconfig.json
+*.DS_Store
