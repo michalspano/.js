@@ -1,6 +1,6 @@
-# Learning web development with JS and TS.
-### Primarily using [Node.js][NODE-JS]
-### By @michalspano.
+# Console Based JavaScript (and TypeScript)
+
+__TL;DR__ -> [Node.js][NODE-JS] for docs.
 
 <!-- REFS -->
 [NODE-JS]: https://nodejs.org/en/
